@@ -18,17 +18,18 @@ function App(){
       setBmiresult('Invalid height');
     } }
   return (
-    <div className='flex justify-center bg-blue-400 h-screen w-screen'>
-      <div className='text-center h-1/2 w-1/5 border-2 mt-36 bg-white shadow '> 
-      <h2 className='text-2xl font-bold p-4'>BMI Calculator</h2>
+    <div className='flex justify-center bg-blue-400 items-center min-h-screen'>
+      <div className='bg-white border-2 rounded-lg shadow-lg w-full max-w-md p-6'> 
+      <h2 className='text-2xl font-bold p-4 flex justify-center'>BMI Calculator</h2>
 
       <div className='p-4'>
       <p className='pb-1'>Weight(KG)</p>
-      <input className='border-2 p-1' type='number' name='weight' onChange={changeHandler} placeholder='Enter weight' value={formData.weight}></input><br></br>
+      <input className='border-2 p-1  w-full rounded' type='number' name='weight' onChange={changeHandler} placeholder='Enter weight' value={formData.weight}></input><br></br>
       <p className='pt-2 pb-1'>Height(CM)</p>
-      <input className='border-2 p-1' type='number' name='height' onChange={changeHandler} placeholder='Enter height' value={formData.height}></input> <br></br>
-      <button type='button' className='border-2 p-2 m-4 bg-blue-700 text-white' onClick={clickHandler}>Check</button>
-      <h1>Your BMI is {bmiresult}</h1>
+      <input className='border-2 p-1  w-full rounded' type='number' name='height' onChange={changeHandler} placeholder='Enter height' value={formData.height}></input> <br></br>
+      
+      <div className='flex justify-center'><button type='button' className='border-2 p-2 m-4 bg-blue-700 text-white' onClick={clickHandler}>Check</button></div>
+      <h1 className='text-center'>Your BMI is {bmiresult}</h1>
       </div>
       </div>
     </div>
